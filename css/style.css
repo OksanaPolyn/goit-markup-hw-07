@@ -17,14 +17,15 @@
     --timing-duration: 250ms;
     --time-function: cubic-bezier(0.4, 0, 0.2, 1);    
     --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
-
 }
 
 li {
     list-style-type: none;
 }
+
+a {
+    text-decoration: none;
+    font-style: normal;}
 
 ul {
     margin: 0;
@@ -32,11 +33,19 @@ ul {
     list-style: none;
 }
 
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
 img {
     display: block;
     max-width: 100%;
-    height: auto;
-    
+    height: auto;   
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -53,7 +62,8 @@ html {
 *::after {
     box-sizing: inherit;
 }
-    
+ 
+/*--HEADER---*/
 .body {
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.03em;
@@ -68,9 +78,7 @@ html {
     border-bottom: 1px solid #ECECEC;
 }
 
-a {
-    text-decoration: none;
-    font-style: normal;}
+
 
 .logo {
     font-family:'Raleway', sans-serif;
@@ -89,11 +97,9 @@ a {
 }
 
 .list{
-    /*text-decoration: none;*/
-    margin: 0px;
-   /* list-style: none;*/
-    
+    margin: 0px;   
 }
+
 .list-cont{
     font-weight: 500;
     line-height: 1.14;
@@ -101,11 +107,11 @@ a {
     text-decoration: none;
     margin: 0px;
 }
+
 .item{
     color:var(--main-title-color);
     margin: 0px;
-    /*padding-top: 32px;
-    padding-bottom: 32px;*/
+    
 }
 
 .site-nav .link.current {
@@ -215,24 +221,7 @@ a {
     color: var(--two-title-color);
    
 }
-.btn-item{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    color:var(--two-title-color);
-    text-align: center;
-}
 
-.btn-item:not(:last-child) {
-padding-right: 8px;}
-
-.main-btn {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-} 
 
 .cursor:hover
 .cursor:focus {
@@ -425,15 +414,7 @@ color:var(--two-title-color);
 .cont+.cont{ 
     margin-left: 50px;
 }
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-   /* padding-inline-start: 40px;*/
-}
+
 .section{
     display: block;
     padding-top: 94px;
@@ -557,17 +538,52 @@ ul {
     margin-right:-30px;
     margin-bottom:-30px;
 }
-.btn-item {
-    padding: 0;
+.list-btn {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+} 
+.item-btn{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color:var(--two-title-color);
+    text-align: center;
+    padding: 0
 }
+
+.item-btn:not(:last-child) {
+padding-right: 8px;}
+
+.portfolio-btn{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    color: var(--main-title-color);
+    cursor: pointer;
+    background-color: var(--btn-comand);
+    border-radius: 4px;
+    padding: 6px 22px;
+    border: none;
+    transition: background-color 250ms var(--time-function), color 250ms var(--time-function), box-shadow 250ms var(--time-function);
+    box-shadow: var(--time-function);
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+background-color: var(--accent-color);
+color:var(--two-title-color);
+}
+
+
 .portfolio-btn:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);;
-    
 }
+
 .item-potfolio{
-    /*position: relative;*/
     display: flex;
     width: 370px;
     height: 404px;
@@ -582,10 +598,20 @@ ul {
     margin-right: 30px;
     margin-bottom: 30px;   
 }
+.item-potfolio:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);;
+}
 
 .img-portf{
     width: 100%;
 }
+.img-portf:focus .portfolio-overlay,
+.img-portf:hover .portfolio-overlay{
+    transform: translateY(0);
+}
+
 .thumb {
     display: block;
     position: relative;
@@ -610,44 +636,15 @@ ul {
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.img-portf:focus .portfolio-overlay,
-.img-portf:hover .portfolio-overlay{
-    transform: translateY(0);
-}
 
-
-.text-div{
+.text-list{
     padding: 20px 24px;
 }
-.portfolio-btn{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    color: var(--main-title-color);
-    cursor: pointer;
-    background-color: var(--btn-comand);
-    border-radius: 4px;
-    padding: 6px 22px;
-    border: none;
-    transition: background-color 250ms var(--time-function), color 250ms var(--time-function), box-shadow 250ms var(--time-function);
-    box-shadow: var(--time-function);
-}
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-background-color: var(--accent-color);
-color:var(--two-title-color);
-}
 
-.item-potfolio:hover {
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);;
-
-}
 .portfolio-projects-link img {
     display: block;
 }
-
+/*------END PORTFOLIO-------*/
 
 /*------4-----*/
 .client-title{
@@ -743,6 +740,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 .client-item {
     flex-basis: calc(100% / 6 - 30px);
 }
+
+/*----FOOTER-------*/
 .footer-right {
     margin-left: 70px;
     margin-right: auto;
@@ -796,6 +795,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
  {
     margin-right: 10px;
 }
+
 /*-----6 ДЗ----*/
 
 .form-subscribe {
@@ -881,8 +881,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 
 /*Модальное окно*/
 
-/*-----------------6тема----------------*/
-
 .backdrop {
     position: fixed;
     top: 0;
@@ -950,25 +948,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     line-height: 1.15;
     text-align: center;
   }
-  
-  /*.modal-close-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: transparent;
-    border-radius: 50%;
-    fill: #000000;
-  
-    transition: fill var(--timing-duration) var(--transition-timing-function);
-  }*/
   
   .modal-btn:hover,
   .modal-btn:focus {
