@@ -122,7 +122,6 @@ html {
 }*/
 
 /*------------HEADER-----------------*/
-
 .header{
     background: var(--main-btn-color);
     list-style-type: none;
@@ -136,7 +135,7 @@ html {
     align-items: center;
     margin-right: auto;
 }
-/*.header-link {
+.header-link {
     position: relative;
 }
 .header-link.current::after .link.current::after {
@@ -148,9 +147,9 @@ html {
     border-radius: 2px;
     left: 0;
     bottom: -32px;
-}*/
+}
 
-
+/*--------------LOGO----*/
 .logo {
     font-family:'Raleway', sans-serif;
     font-weight:700;
@@ -165,7 +164,8 @@ html {
 }
 .logo-thre{
     color:var(--two-title-color);
-}
+}*/
+
 
 link.current::after {
     content: '';
@@ -186,15 +186,18 @@ link.current::after {
     text-decoration: none;
     margin: 0px;
 }
-
-
+.site-nav{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
 
 .site-nav .link.current {
     position: relative;
     color: var(--accent-text-color);
 }
 
-  
 .site-nav .link {
     display: block;
     padding-top: 32px;
@@ -206,6 +209,7 @@ link.current::after {
     letter-spacing: 0.02em;
     transition: color var(--timing-function) var(--cubic);
 }
+
 .item{
     color:var(--main-title-color);
     margin: 0px;
@@ -230,9 +234,6 @@ link.current::after {
     border-radius: 2px;
 }
 
-.col-one{
-    color: var(--accent-color);
-}
 .col {
     color: var(--primary-text-color) ;
     padding-top: 32px;
@@ -296,14 +297,6 @@ link.current::after {
    
 }
 
-
-.site-nav{
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
-}
-
 .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -316,7 +309,7 @@ link.current::after {
     margin-left: 50px;
 }
 
-/*-------ЕТАПИ РОБОТИ------*/
+/*-------ЕТАПИ РОБОТИ---Stage Work---*/
 
 .type-name{
     font-weight: 700;
@@ -458,8 +451,7 @@ link.current::after {
 .team_soc_item {
     margin-right: 10px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    
+    border-radius: 50%;  
 }
 
 .team_soc_item {
@@ -634,6 +626,7 @@ link.current::after {
     fill: var(--main-btn-color);
 }
 
+/*--FOOTER subsribe---*/
 .form-subscribe {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -642,8 +635,6 @@ link.current::after {
     -ms-flex-align: end;
     align-items: flex-end;
 }
-
-.form-subscribe__field{}
 
 .form-subscribe__label {
     display: block;
